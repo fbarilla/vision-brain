@@ -1,4 +1,15 @@
 FROM jarvice/ubuntu-ibm-mldl-ppc64le
+# uprev to force rebuild even if cached
+ENV APP_POWERAI_VERSION 6
+
+ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
+RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
+
+COPY NAE/screenshot.png /etc/NAE/screenshot.png
+COPY NAE/help.html /etc/NAE/help.html
+
+COPY NAE/AppDef.json /etc/NAE/AppDef.json
+RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
 
 #add Jupyter
 RUN pip install --upgrade pip
@@ -26,32 +37,20 @@ RUN pip install dragnet
 RUN apt-get install -y supervisor
 WORKDIR /etc/skel
 
-ADD cels.csv  /etc/skel/data
-Add CTIUS.csv  /etc/skel/data
-ADD DAX-SP-FTSE-index.csv  /etc/skel/data
-ADD eui.csv  /etc/skel/data
-ADD icln.csv  /etc/skel/data
-ADD n8wh.csv  /etc/skel/data
-ADD qcln.csv  /etc/skel/data
-ADD watson.csv  /etc/skel/data
-ADD watson-results.csv  /etc/skel/data
-ADD watson-results-test.csv /etc/skel/data
-ADD binary-classification.png  /etc/skel/data
-ADD feed-forward.png  /etc/skel/data
-ADD IBM-Google-Demo-Env.png  /etc/skel/data
-ADD NN-Results.png /etc/skel/data
-ADD Clean_Energy_Watson_V1.0.ipynb /etc/skel/data
-ADD nyt_article_results.json /etc/skel/data
+ADD cels.csv  /data
+Add CTIUS.csv  /data
+ADD DAX-SP-FTSE-index.csv  /data
+ADD eui.csv  /data
+ADD icln.csv  /data
+ADD n8wh.csv  /data
+ADD qcln.csv  /data
+ADD watson.csv  /data
+ADD watson-results.csv  /data
+ADD watson-results-test.csv /data
+ADD binary-classification.png  /data
+ADD feed-forward.png  /data
+ADD IBM-Google-Demo-Env.png  /data
+ADD NN-Results.png /data
+ADD Clean_Energy_Watson_V1.0.ipynb /data
+ADD nyt_article_results.json /data
 
-
-# uprev to force rebuild even if cached
-ENV APP_POWERAI_VERSION 6
-
-ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
-RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
-
-COPY NAE/screenshot.png /etc/NAE/screenshot.png
-COPY NAE/help.html /etc/NAE/help.html
-
-COPY NAE/AppDef.json /etc/NAE/AppDef.json
-RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
