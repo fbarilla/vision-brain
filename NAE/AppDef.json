@@ -1,7 +1,7 @@
 {
     "name": "PowerAI Notebooks",
-    "description": "Jupyter Notebooks for TensorFlow PowerAI ML/DL framework.",
-    "author": "Nimbix, Inc.",
+    "description": "Jupyter Notebook for TensorFlow PowerAI ML/DL framework.",
+    "author": "IBM, Inc.",
     "licensed": true,
     "classifications": [
         "Machine Learning/Deep Learning",
