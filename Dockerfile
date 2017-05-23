@@ -37,7 +37,7 @@ RUN pip install dragnet
 RUN apt-get install -y supervisor
 
 ADD cels.csv  /data
-Add CTIUS.csv  /data
+ADD CTIUS.csv  /data
 ADD DAX-SP-FTSE-index.csv  /data
 ADD eui.csv  /data
 ADD icln.csv  /data
