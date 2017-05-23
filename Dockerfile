@@ -35,7 +35,6 @@ RUN pip install dragnet
 
 #add startupscripts
 RUN apt-get install -y supervisor
-WORKDIR /etc/skel
 
 ADD cels.csv  /data
 Add CTIUS.csv  /data
