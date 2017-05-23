@@ -1,5 +1,8 @@
 FROM jarvice/ubuntu-ibm-mldl-ppc64le
 
+RUN apt-get -y install unzip openssh-server && apt-get clean
+
+
 # uprev to force rebuild even if cached
 ENV APP_POWERAI_VERSION 6
 
