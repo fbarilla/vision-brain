@@ -1,7 +1,7 @@
 {
-    "name": "PowerAI Notebooks",
-    "description": "Jupyter Notebooks for various PowerAI ML/DL frameworks, including TensorFlow&trade;, Chainer, and Theano.",
-    "author": "Nimbix, Inc.",
+    "name": "PowerAI Demo Notebook",
+    "description": "Jupyter Notebook for TensorFlow PowerAI ML/DL framework.",
+    "author": "IBM, Inc.",
     "licensed": true,
     "classifications": [
         "Machine Learning/Deep Learning",
@@ -23,31 +23,7 @@
         "OBJECT"
     ],
     "commands": {
-        "Chainer": {
-            "path": "/usr/local/bin/nimbix_notebook",
-            "interactive": true,
-            "name": "Chainer",
-            "description": "Launch a Jupyter Notebook to use Chainer directly in your browser.",
-            "parameters": {
-                "-s": {
-                    "name": "-s",
-                    "description": "-s",
-                    "type": "CONST",
-                    "value": "/opt/DL/chainer/bin/chainer-activate",
-                    "positional": false,
-                    "required": true
-                },
-                "-r": {
-                    "name": "Requirements file",
-                    "description": "Select a text file to use as a list of pip requirements (e.g. requirements.txt)",
-                    "type": "FILE",
-                    "positional": false,
-                    "required": false,
-                    "filter": "*.txt"
-                }
-            }
-        },
-        "TensorFlow": {
+        "TensorFlow Demo": {
             "path": "/usr/local/bin/nimbix_notebook",
             "interactive": true,
             "name": "TensorFlow&trade;",
@@ -58,30 +34,6 @@
                     "description": "-s",
                     "type": "CONST",
                     "value": "/opt/DL/tensorflow/bin/tensorflow-activate",
-                    "positional": false,
-                    "required": true
-                },
-                "-r": {
-                    "name": "Requirements file",
-                    "description": "Select a text file to use as a list of pip requirements (e.g. requirements.txt)",
-                    "type": "FILE",
-                    "positional": false,
-                    "required": false,
-                    "filter": "*.txt"
-                }
-            }
-        },
-        "Theano": {
-            "path": "/usr/local/bin/nimbix_notebook",
-            "interactive": true,
-            "name": "Theano",
-            "description": "Launch a Jupyter Notebook to use Theano directly in your browser.",
-            "parameters": {
-                "-s": {
-                    "name": "-s",
-                    "description": "-s",
-                    "type": "CONST",
-                    "value": "/opt/DL/theano/bin/theano-activate",
                     "positional": false,
                     "required": true
                 },
