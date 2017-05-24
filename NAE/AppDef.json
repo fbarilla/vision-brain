@@ -12,7 +12,7 @@
         "IBM POWER/Data Science"
     ],
     "machines": [
-        "np8gk1"
+        "np8g1"
     ],
     "vault-types": [
         "NONE"
@@ -21,7 +21,7 @@
         "Start": {
             "path": "/usr/local/scripts/sample_notebook.sh",
             "interactive": true,
-            "name": "Chainer",
+            "name": "Start",
             "description": "Launch a Jupyter Notebook to run the TensorFlow demo directly in your browser.",
             "parameters": {
                 "-s": {
