@@ -35,21 +35,20 @@ RUN pip install dragnet
 
 #add startupscripts
 RUN apt-get install -y supervisor
-WORKDIR /etc/skel
 
-ADD cels.csv  /etc/skel/
-Add CTIUS.csv  /etc/skel/
-ADD DAX-SP-FTSE-index.csv  /etc/skel/
-ADD eui.csv  /etc/skel/
-ADD icln.csv  /etc/skel/
-ADD n8wh.csv  /etc/skel/
-ADD qcln.csv  /etc/skel/
-ADD watson.csv  /etc/skel/
-ADD watson-results.csv  /etc/skel/
-ADD watson-results-test.csv /etc/skel/
-ADD binary-classification.png  /etc/skel/
-ADD feed-forward.png  /etc/skel/
-ADD IBM-Google-Demo-Env.png  /etc/skel/
-ADD NN-Results.png /etc/skel/
-ADD Clean_Energy_Watson_V1.0.ipynb /etc/skel/
-ADD nyt_article_results.json /etc/skel/
+ADD cels.csv  /data
+ADD CTIUS.csv  /data
+ADD DAX-SP-FTSE-index.csv  /data
+ADD eui.csv  /data
+ADD icln.csv  /data
+ADD n8wh.csv  /data
+ADD qcln.csv  /data
+ADD watson.csv  /data
+ADD watson-results.csv  /data
+ADD watson-results-test.csv /data
+ADD binary-classification.png  /data
+ADD feed-forward.png  /data
+ADD IBM-Google-Demo-Env.png /data
+ADD NN-Results.png /data
+ADD Clean_Energy_Watson_V1.0.ipynb /data
+ADD nyt_article_results.json /data
