@@ -53,3 +53,6 @@ ADD IBM-Google-Demo-Env.png /data
 ADD NN-Results.png /data
 ADD Clean_Energy_Watson_V1.0.ipynb /data
 ADD nyt_article_results.json /data
+
+EXPOSE 22
+
