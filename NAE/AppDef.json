@@ -23,7 +23,7 @@
         "OBJECT"
     ],
     "commands": {
-        "TensorFlow Demo": {
+        "TensorFlow": {
             "path": "/usr/local/bin/nimbix_notebook",
             "interactive": true,
             "name": "TensorFlow&trade;",
