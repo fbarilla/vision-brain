@@ -11,6 +11,8 @@ COPY NAE/help.html /etc/NAE/help.html
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
 
+RUN apt-get update
+
 #add Jupyter
 # RUN pip install --upgrade pip
 # RUN pip install notebook pyyaml
@@ -26,7 +28,7 @@ RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice
 # RUN apt-get install -y python-dev
 # RUN apt-get install -y python-matplotlib
 # RUN apt-get install -y python-lxml
-# RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server
 # RUN pip install cython
 # RUN apt-get install -y python-scipy
 # RUN pip install scikit-learn
