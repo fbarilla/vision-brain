@@ -1,6 +1,6 @@
 {
-    "name": "Tensorflow",
-    "description": "TensorFlow Clean Energy Index demo.",
+    "name": "VisionBrain",
+    "description": "Vision Brain demo access.",
     "author": "IBM, Inc.",
     "licensed": true,
     "classifications": [
@@ -12,7 +12,7 @@
         "IBM POWER/Data Science"
     ],
     "machines": [
-        "np8g1"
+        "np8c0"
     ],
     "vault-types": [
         "NONE"
@@ -22,13 +22,13 @@
             "path": "/usr/local/scripts/sample_notebook.sh",
             "interactive": true,
             "name": "Start",
-            "description": "Launch a Jupyter Notebook to run the TensorFlow demo directly in your browser.",
+            "description": "Vision Brain demo access.",
             "parameters": {
                 "-s": {
                     "name": "-s",
                     "description": "-s",
                     "type": "CONST",
-                    "value": "/opt/DL/tensorflow/bin/tensorflow-activate",
+                    "value": "",
                     "positional": false,
                     "required": true
                 },
