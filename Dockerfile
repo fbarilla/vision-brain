@@ -5,8 +5,6 @@ ENV APP_POWERAI_VERSION 1
 
 # ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 ADD install-ubuntu.sh /tmp/install-ubuntu.sh
-# ADD default /etc/nginx/sites-enabled
-# ADD notebook-site /etc/nginx/sites-enabled
 RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
 
 COPY NAE/help.html /etc/NAE/help.html
