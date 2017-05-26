@@ -6,6 +6,7 @@ ENV APP_POWERAI_VERSION 1
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
 RUN mkdir -p /usr/local/samples
+RUN chmod 755 /usr/local/bin/samples
 
 COPY NAE/help.html /etc/NAE/help.html
 
