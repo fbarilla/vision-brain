@@ -19,9 +19,9 @@ apt-get clean
 
 cd /etc/nginx/sites-enabled
 curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/nimbix/notebook-common/master/conf/default
-sed -i 's/proxy_pass http:\/\/localhost:8888;/proxy_pass http:\/\/www.google.com:80;/g' default
+sed -i 's/proxy_pass http:\/\/localhost:8888;/proxy_pass https:\/\/ny1.ptopenlab.com\/AIVision\/;/g' default
 curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/nimbix/notebook-common/master/conf/notebook-site
-sed -i 's/proxy_pass http:\/\/localhost:8888;/proxy_pass http:\/\/www.google.com:80;/g' notebook-site
+sed -i 's/proxy_pass http:\/\/localhost:8888;/proxy_pass https:\/\/ny1.ptopenlab.com\/AIVision\/;/g' notebook-site
 cd /etc/nginx/conf.d
 curl -H 'Cache-Control: no-cache' -O https://raw.githubusercontent.com/nimbix/notebook-common/master/conf/httpredirect.conf
 cd /usr/local/bin
