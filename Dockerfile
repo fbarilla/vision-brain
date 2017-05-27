@@ -8,6 +8,8 @@ ADD install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
 
 COPY NAE/help.html /etc/NAE/help.html
+# Material Compute screenshot
+COPY NAE/screenshot.png /etc/NAE/screenshot.png
 
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
