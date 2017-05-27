@@ -1,6 +1,6 @@
 {
-    "name": "VisionBrain",
-    "description": "Vision Brain demo access.",
+    "name": "AI Vision",
+    "description": "AI Vision demo access.",
     "author": "IBM, Inc.",
     "licensed": true,
     "classifications": [
@@ -22,7 +22,7 @@
             "path": "/usr/local/scripts/sample_notebook.sh",
             "interactive": true,
             "name": "Start",
-            "description": "Vision Brain demo access.",
+            "description": "AI Vision demo access.",
             "parameters": {
                 "-s": {
                     "name": "-s",
